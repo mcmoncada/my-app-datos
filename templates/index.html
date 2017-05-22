@@ -5,6 +5,68 @@
   	<title>Aplicación incendios</title>
   </head>
      <body>
-     <h1>Incendios en España entre 2004 y 2014</h1>
+         <h1>Incendios en España entre 2004 y 2014</h1>
+         <table border=1 cellpadding=7>
+             <tr>
+                 <th>Comunidad</th>
+                 <th>Muertos</th>
+                 <th>Heridos</th>              
+     	         <th>Superficie quemada</th>
+     	         <th>Provincia</th>
+     	         <th>Comarca</th>
+     	         <th>Municipio</th>
+     	         <th>Fecha</th>
+     	         <th>Causa</th>
+     	         <th>Perdidas</th>
+     	         <th>Latitud</th>
+     	         <th>Longitud</th>
+             </tr>
+     {% for obj in object_list %}
+             <tr>
+                <td>Comunidad A</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1000</td>
+                <td>Provincia A</td>
+                <td>Comarca A</td>
+                <td>Municipio A</td>
+                <td>1/01/2001</td>
+                <td>Provocado</td>
+                <td>1000000</td>
+                <td>40</td>
+                <td>-3</td>
+             	<td>{{ obj['COMUNIDAD'].decode('UTF-8') }}</td>
+             </tr>
+             <tr>
+             	<td>Comunidad B</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2000</td>
+                <td>Provincia B</td>
+                <td>Comarca B</td>
+                <td>Municipio B</td>
+                <td>2/02/2002</td>
+                <td>Provocado</td>
+                <td>2000000</td>
+                <td>42</td>
+                <td>-2</td>
+             </tr>
+             <tr>
+             	<td>Comunidad C</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3000</td>
+                <td>Provincia C</td>
+                <td>Comarca C</td>
+                <td>Municipio C</td>
+                <td>3/03/2003</td>
+                <td>Desconocida</td>
+                <td>3000000</td>
+                <td>38</td>
+                <td>-5</td>             	
+             </tr>
+     {% endfor %}            	
+     </table>
+
      </body>
 </html>
