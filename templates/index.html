@@ -8,6 +8,7 @@
          <h1>Incendios en España entre 2004 y 2014</h1>
          <table border=1 cellpadding=7>
              <tr>
+                 <th>IDPIF</th>
                  <th>Comunidad</th>
                  <th>Muertos</th>
                  <th>Heridos</th>              
@@ -23,6 +24,8 @@
              </tr>
      {% for obj in object_list %}
              <tr>
+                <td><a href="{{ obj['IDPIF'] }}/">{{ obj['IDPIF'] }}</a></td>
+                <td>1</td>
                 <td>Comunidad A</td>
                 <td>1</td>
                 <td>1</td>
@@ -38,6 +41,7 @@
              	<td>{{ obj['COMUNIDAD'].decode('UTF-8') }}</td>
              </tr>
              <tr>
+                <td>2</td>
              	<td>Comunidad B</td>
                 <td>2</td>
                 <td>2</td>
@@ -52,6 +56,7 @@
                 <td>-2</td>
              </tr>
              <tr>
+                <td>3</td>
              	<td>Comunidad C</td>
                 <td>3</td>
                 <td>3</td>
